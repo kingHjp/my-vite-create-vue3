@@ -1,3 +1,11 @@
 {
-  "recommendations": ["Vue.volar"]
+  "recommendations": [
+    "Vue.volar",
+    "editorconfig.editorconfig",
+    "rvest.vs-code-prettier-eslint",
+    "esbenp.prettier-vscode",
+    "dbaeumer.vscode-eslint",
+    "stylelint.vscode-stylelint",
+    "christian-kohler.path-intellisense"
+  ]
 }

@@ -1,0 +1,161 @@
+{
+  // 指定 TypeScript 的 SDK 路径，告诉 VS Code 使用项目本地安装的 TypeScript，而不是全局安装的版本。
+  // 这样可以确保 TypeScript 的版本与项目的依赖一致，避免版本不匹配导致的问题。
+  "typescript.tsdk": "node_modules/typescript/lib",
+  // 包管理工具
+  "npm.packageManager": "pnpm",
+  // 设置 Tab 的宽度为 2 个空格
+  "editor.tabSize": 2,
+  // 配置 Prettier 的最大行宽为 100，超过此宽度会自动换行。
+  "prettier.printWidth": 100, // 超过最大值换行
+  // 指定默认的代码格式化工具为 Prettier
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // 设置文件的换行符为 \n（Unix 风格）
+  "files.eol": "\n",
+  // 搜索排除规则 vscode搜索时的排除规则
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/*.log": true,
+    "**/*.log*": true,
+    "**/bower_components": true,
+    "**/dist": true,
+    "**/elehukouben": true,
+    "**/.git": true,
+    "**/.gitignore": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "**/.idea": true,
+    "**/.vscode": false,
+    "**/yarn.lock": true,
+    "**/tmp": true,
+    "out": true,
+    "dist": true,
+    "node_modules": true,
+    "CHANGELOG.md": true,
+    "examples": true,
+    "res": true,
+    "screenshots": true,
+    "yarn-error.log": true,
+    "**/.yarn": true
+  },
+  // 配置vscode文件资源管理器中需要隐藏的文件或文件夹
+  "files.exclude": {
+    "**/.cache": true,
+    "**/.editorconfig": true,
+    "**/.eslintcache": true,
+    "**/bower_components": true,
+    "**/.idea": true,
+    "**/tmp": true,
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true
+  },
+  // 文件监视排除规则 例如mode_modules文件夹下的文件有变动也不需要监视
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.vscode/**": true,
+    "**/node_modules/**": true,
+    "**/tmp/**": true,
+    "**/bower_components/**": true,
+    "**/dist/**": true,
+    "**/yarn.lock": true
+  },
+  // 启用 Stylelint 插件，用于检查 CSS、Less、SCSS 等文件的样式问题
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  // 配置了需要校验的文件类型，包括 vue 文件
+  "stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass"],
+  // 路径别名映射
+  "path-intellisense.mappings": {
+    "@/": "${workspaceRoot}/src"
+  },
+  /*
+    语言格式化工具
+    esbenp.prettier-vscode Prettier 
+    rvest.vs-code-prettier-eslint Prettier-ESLint
+  */
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint"
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // 保存自动格式化
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.stylelint": "explicit"
+  },
+  "i18n-ally.localesPaths": ["src/locales"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sortKeys": true,
+  "i18n-ally.namespace": false,
+  "i18n-ally.enabledParsers": ["ts"],
+  "i18n-ally.sourceLanguage": "en",
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.enabledFrameworks": ["vue", "react"],
+  // cSpell.words 是 VS Code 的拼写检查插件 Code Spell Checker 的配置项
+  "cSpell.words": [
+    "brotli",
+    "browserslist",
+    "codemirror",
+    "commitlint",
+    "cropperjs",
+    "echart",
+    "echarts",
+    "esnext",
+    "pinia",
+    "pnpm",
+    "qrcode",
+    "sider",
+    "sortablejs",
+    "stylelint",
+    "svgs",
+    "unocss",
+    "unplugin",
+    "unref",
+    "videojs",
+    "vueuse",
+    "wangeditor"
+  ],
+  // 控制相关文件嵌套展示
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "*.ts": "$(capture).test.ts, $(capture).test.tsx",
+    "*.tsx": "$(capture).test.ts, $(capture).test.tsx",
+    "*.env": "$(capture).env.*",
+    "package.json": "pnpm-lock.yaml,yarn.lock,LICENSE,README*,CHANGELOG*,CNAME,.gitattributes,.eslintrc-auto-import.json,eslint.config.js,.gitignore,prettier.config.js,.prettierrc,stylelint.config.js,stylelint.config.cjs,commitlint.config.js,.stylelintignore,.prettierignore,.gitpod.yml,.eslintrc.js,.eslintignore"
+  },
+  "terminal.integrated.scrollback": 10000,
+  "nuxt.isNuxtApp": false
+}
