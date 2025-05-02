@@ -1,5 +1,14 @@
 import { createApp } from 'vue'
 import './style.css'
 import App from './App.vue'
+// 路由
+import router, { setupRouter } from './router'
+const setupAll = async () => {
+  const app = createApp(App)
+  setupRouter(app)
+  await router.isReady()
 
-createApp(App).mount('#app')
+  app.mount('#app')
+}
+
+setupAll()
