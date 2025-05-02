@@ -1,4 +1,4 @@
-import { resolve } from 'path'
+// import { resolve } from 'path'
 import Vue from '@vitejs/plugin-vue'
 // @ts-ignore
 import AutoImport from 'unplugin-auto-import/vite' // 自动为 Vite、Webpack、Rollup 和 esbuild 按需自动导入 API
@@ -6,12 +6,12 @@ import Components from 'unplugin-vue-components/vite' // Vue 的按需组件自�
 import viteCompression from 'vite-plugin-compression'
 
 export function createVitePlugins() {
-  const root = process.cwd()
+  // const root = process.cwd()
 
   // 路径查找
-  function pathResolve(dir: string) {
-    return resolve(root, '.', dir)
-  }
+  // function pathResolve(dir: string) {
+  //   return resolve(root, '.', dir)
+  // }
 
   return [
     Vue(),
@@ -31,7 +31,7 @@ export function createVitePlugins() {
       // 指定自动导入的库
       imports: [
         'vue',
-        'vue-router',
+        'vue-router'
         // 可额外添加需要 autoImport 的组件
         // {
         // }
@@ -53,7 +53,7 @@ export function createVitePlugins() {
       // 自定义组件的解析器
       resolvers: [],
       //  指定需要自动注册的组件文件路径
-      globs: ["src/components/**/**.{vue, md}", '!src/components/DiyEditor/components/mobile/**']
+      globs: ['src/components/**/**.{vue, md}', '!src/components/DiyEditor/components/mobile/**']
     }),
     // 构建过程中自动压缩生成的文件
     viteCompression({
