@@ -9,8 +9,9 @@
       </nav>
     </div>
   </header>
-
-  <RouterView style="height: calc(100% - 1.5em)" />
+  <div style="height: calc(100% - 1.5em)">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
