@@ -9,3 +9,7 @@ Learn more about the recommended Project Setup and IDE Support in the [Vue Docs 
 ## 配置代码质量工具（Prettier、ESLint、Stylelint）配置ctrl+s保存后自动修复
 
 [配置文档](https://blog.csdn.net/weixin_42343307/article/details/147652910?spm=1011.2415.3001.5331)
+
+## 项目文档
+
+[项目详细介绍](https://blog.csdn.net/weixin_42343307/article/details/147239763?spm=1001.2014.3001.5502) 可以根据commit记录查看项目对应的介绍

@@ -1,4 +1,4 @@
-import { store } from '../index.ts'
+import { store } from '@/store'
 import { defineStore } from 'pinia'
 
 interface AppState {
