@@ -4,7 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite' // 自动为 Vite、Webpack、Rollup 和 esbuild 按需自动导入 API
 import Components from 'unplugin-vue-components/vite' // Vue 的按需组件自动导入
 import viteCompression from 'vite-plugin-compression'
-
+import UnoCSS from 'unocss/vite'
 export function createVitePlugins() {
   // const root = process.cwd()
 
@@ -15,6 +15,7 @@ export function createVitePlugins() {
 
   return [
     Vue(),
+    UnoCSS(),
     // VueJsx(),
     // UnoCSS(),
     // progress(),

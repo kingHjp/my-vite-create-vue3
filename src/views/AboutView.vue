@@ -1,7 +1,9 @@
 <template>
-  <div> AboutView </div>
-  <img :src="img123" alt="" srcset="" />
-  <img :src="svg2" alt="" srcset="" />
+  <div
+    class="after:content-['*'] after:ml-0.5 after:text-red-500 block text-sm font-medium text-slate-700"
+  >
+    aaaagfd
+  </div>
 </template>
 
 <script setup lang="ts">

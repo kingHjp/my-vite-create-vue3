@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+import 'virtual:uno.css'
 import App from './App.vue'
 // 引入状态管理
 import { setupStore } from './store/index.ts'
