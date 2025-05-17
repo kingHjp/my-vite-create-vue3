@@ -4,7 +4,9 @@ This template should help get you started developing with Vue 3 and TypeScript i
 
 Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
 
-> 创建 vue3+ts 项目模板
+> 分支说明 master 为主分支 dev 分支为开发分支 my-echats-template 分支为echates 模板分支
+
+创建 vue3+ts 项目模板
 
 ## 配置代码质量工具（Prettier、ESLint、Stylelint）配置ctrl+s保存后自动修复
 
