@@ -4,6 +4,7 @@ import Vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite' // 自动为 Vite、Webpack、Rollup 和 esbuild 按需自动导入 API
 import Components from 'unplugin-vue-components/vite' // Vue 的按需组件自动导入
 import viteCompression from 'vite-plugin-compression'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers' // Element Plus 组件解析器
 import UnoCSS from 'unocss/vite'
 export function createVitePlugins() {
   // const root = process.cwd()
@@ -40,7 +41,7 @@ export function createVitePlugins() {
       // 生成自动导入的声明文件路径
       dts: 'src/types/auto-imports.d.ts',
       // 自定义解析器
-      resolvers: [],
+      resolvers: [ElementPlusResolver()],
       //  配置 ESLint 插件，这里禁用了自动导入的 ESLint 插件
       eslintrc: {
         enabled: false, // Default `false`
@@ -52,7 +53,7 @@ export function createVitePlugins() {
       // 生成自定义 `auto-components.d.ts` 全局声明
       dts: 'src/types/auto-components.d.ts',
       // 自定义组件的解析器
-      resolvers: [],
+      resolvers: [ElementPlusResolver()],
       //  指定需要自动注册的组件文件路径
       globs: ['src/components/**/**.{vue, md}', '!src/components/DiyEditor/components/mobile/**']
     }),
