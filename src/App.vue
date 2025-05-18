@@ -1,17 +1,15 @@
 <script setup lang="ts"></script>
 
 <template>
-  <header>
+  <!-- <header>
     <div class="wrapper">
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div>
-  </header>
-  <div style="height: calc(100% - 1.5em)">
-    <RouterView />
-  </div>
+  </header> -->
+  <RouterView />
 </template>
 
 <style scoped>
